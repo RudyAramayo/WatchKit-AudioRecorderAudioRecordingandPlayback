@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.20" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Recording Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="AAPLAudioRecordingInterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Start Recording" id="UDa-vL-EYO">
+                            <connections>
+                                <action selector="startRecording" destination="AgC-eL-Hgc" id="cYP-u3-YfI"/>
+                            </connections>
+                        </button>
+                        <picker width="1" height="84" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="JZu-vY-vWT">
+                            <connections>
+                                <action selector="pickerValueSelected:" destination="AgC-eL-Hgc" id="DhW-9X-mQe"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Play" id="LEL-WQ-e4j">
+                            <connections>
+                                <action selector="playLastRecording" destination="AgC-eL-Hgc" id="stL-ya-poZ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="picker" destination="JZu-vY-vWT" id="3hY-CM-Oih"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="305" y="271.5"/>
+        </scene>
+    </scenes>
+</document>
